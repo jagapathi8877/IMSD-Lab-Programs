@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Extended Student Registration Form</title>
+</head>
+<body>
+    <h2 align="center">Extended Student Registration Form</h2>
+    <form action="#" method="post" enctype="multipart/form-data">
+        <table border="1" cellpadding="10" cellspacing="0" align="center">
+            <caption><strong>Student Details</strong></caption>
+            <tr>
+                <th>Full Name:</th>
+              <td><input type="text" name="fullname" placeholder="Enter full name" 
+required></td>
+            </tr>
+            <tr>
+                <th>Email:</th>
+                <td><input type="email" name="email" placeholder="example@email.com" 
+required></td>
+            </tr>
+            <tr>
+                <th>Password:</th>
+                <td><input type="password" name="password" required></td>
+            </tr>
+            <tr>
+                <th>Mobile Number:</th>
+                <td><input type="tel" name="phone" pattern="[0-9]{10}" placeholder="10-digit 
+number" required></td>
+            </tr>
+            <tr>
+                <th>Age:</th>
+                <td><input type="number" name="age" min="17" max="30"></td>
+            </tr>
+            <tr>
+                <th>Date of Birth:</th>
+                <td><input type="date" name="dob"></td>
+            </tr>
+            <tr>
+                <th>Gender:</th>
+                <td>
+                    <input type="radio" name="gender" value="Male"> Male
+                    <input type="radio" name="gender" value="Female"> Female
+                    <input type="radio" name="gender" value="Other"> Other
+                </td>
+            </tr>
+            <tr>
+                <th>Courses Interested:</th>
+                <td>
+                    <input type="checkbox" name="course" value="C"> C
+                    <input type="checkbox" name="course" value="C++"> C++
+                    <input type="checkbox" name="course" value="Java"> Java
+                    <input type="checkbox" name="course" value="Python"> Python
+                    <input type="checkbox" name="course" value="Web"> Web Development
+                </td>
+            </tr>
+            <tr>
+                <th>Branch:</th>
+                <td>
+                    <select name="branch">
+                        <option value="">--Select Branch--</option>
+                        <option value="CSE">Computer Science</option>
+                        <option value="ECE">Electronics</option>
+                        <option value="EEE">Electrical</option>
+                        <option value="MECH">Mechanical</option>
+                        <option value="CIVIL">Civil</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th>College Website:</th>
+ 		<td><input type="url" name="website" 
+placeholder="https://www.example.com"></td>
+            </tr>
+            <tr>
+                <th>Address:</th>
+                <td><textarea name="address" rows="4" cols="30" placeholder="Enter your 
+address"></textarea></td>
+            </tr>
+            <tr>
+                <th>Upload Resume:</th>
+                <td><input type="file" name="resume"></td>
+            </tr>
+            <tr>
+                <th>Preferred Time Slot:</th>
+                <td><input type="time" name="timeslot"></td>
+            </tr>
+            <tr>
+                <th>Skill Level (0-10):</th>
+                <td><input type="range" name="skill" min="0" max="10"></td>
+            </tr>
+            <tr>
+                <th>Favorite Color:</th>
+                <td><input type="color" name="color"></td>
+            </tr>
+            <!-- Hidden Field -->
+            <tr>
+                <td colspan="2">
+                    <input type="hidden" name="registration_type" value="student">
+                </td>
+            </tr>
+            <tr>
+                <th colspan="2" align="center">
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+                </th>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
