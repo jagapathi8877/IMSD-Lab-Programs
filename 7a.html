@@ -1,0 +1,40 @@
+<html>
+<head>
+  <title>Document Object Example</title>
+</head>
+<body>
+  <h2 id="heading">Welcome to JavaScript Document Object Example</h2>
+  <p id="info">This paragraph will change using document methods.</p>
+  <button onclick="showDocInfo()">Show Document Info</button>
+  <button onclick="changeContent()">Change Content</button>
+  <button onclick="addElement()">Add New Element</button>
+
+  <script>
+    // Display document properties
+    function showDocInfo() {
+      alert(
+        "Title: " + document.title +
+        "\nURL: " + document.URL +
+        "\nLast Modified: " + document.lastModified
+      );
+    }
+
+    // Modify content using document methods
+    function changeContent() {
+      document.getElementById("heading").innerHTML = "Title Changed Using document.getElementById()!";
+      document.getElementById("info").style.color = "blue";
+      document.body.style.backgroundColor = "#f0f8ff";
+    }
+
+    // Add a new element dynamically
+    function addElement() {
+      let newPara = document.createElement("p");
+      newPara.innerHTML = "This paragraph was added using document.createElement() and appendChild().";
+      document.body.appendChild(newPara);
+    }
+
+    // Example of document.write()
+    document.write("<p><i>This line is written using document.write()</i></p>");
+  </script>
+</body>
+</html>

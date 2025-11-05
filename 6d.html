@@ -1,0 +1,46 @@
+<html>
+<head>
+  <style>
+    table { 
+      border-collapse: collapse; 
+      width: 50%; 
+      margin-top: 20px;
+    }
+    th, td { 
+      border: 1px solid black; 
+      padding: 10px; 
+      text-align: left; 
+    }
+    th { background: #f0f0f0; }
+  </style>
+</head>
+<body>
+  <h2>Voter Information</h2>
+  <button onclick="askVoter()">Enter Voter Details</button>
+  <div id="result"></div>
+
+  <script>
+    function askVoter() {
+      var name = prompt("Enter your name:");
+      var age = prompt("Enter your age:");
+      age = parseInt(age);
+      var eligibility = (age >= 18) ? "Can Vote" : "Cannot Vote";
+      var tableHtml = `
+        <table>
+          <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Eligibility</th>
+          </tr>
+          <tr>
+            <td>${name}</td>
+            <td>${isNaN(age) ? "Invalid input" : age}</td>
+            <td>${isNaN(age) ? "Invalid input" : eligibility}</td>
+          </tr>
+        </table>
+      `;
+      document.getElementById("result").innerHTML = tableHtml;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<html>
+<body>
+  <script>
+    var str = " Hello JavaScript ";
+    document.write("Length: " + str.length + "<br>");
+    document.write("Uppercase: " + str.toUpperCase() + "<br>");
+    document.write("Lowercase: " + str.toLowerCase() + "<br>");
+    document.write("Trim: '" + str.trim() + "'<br>");
+    document.write("Substring(1, 6): " + str.substring(1, 6) + "<br>");
+    document.write("Slice(1, 6): " + str.slice(1, 6) + "<br>");
+    document.write("charAt(2): " + str.charAt(2) + "<br>");
+    document.write("charCodeAt(2): " + str.charCodeAt(2) + "<br>");
+    document.write("indexOf('Java'): " + str.indexOf("Java") + "<br>");
+    document.write("lastIndexOf('a'): " + str.lastIndexOf("a") + "<br>");
+    document.write("includes('Script'): " + str.includes("Script") + "<br>");
+    document.write("replace('JavaScript', 'JS'): " + str.replace("JavaScript", "JS") + "<br>");
+    var arr = str.split(" ");
+    document.write("split(' '):        " + arr + "<br>");
+    document.write("concat with ' is fun': " + str.concat(" is fun") + "<br>");
+    document.write("repeat(2): " + str.repeat(2) + "<br>");
+  </script>
+</body>
+</html>

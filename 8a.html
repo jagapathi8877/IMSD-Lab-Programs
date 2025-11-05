@@ -1,0 +1,24 @@
+<html>
+<body>
+    <script>
+        let num1 = Number(prompt("Enter first integer:"));
+        let num2 = Number(prompt("Enter second integer:"));
+        let num3 = Number(prompt("Enter third integer:"));
+        if (num1 == num2 && num2 == num3) {
+            document.write("<p>All the numbers are equal</p>");
+        }
+        else if(num1 >= num2 && num1 >= num3)
+        {
+            document.write("<p>The largest number is " + num1 + "</p>");
+        }
+        else if(num2 >= num1 && num2 >= num3)
+        {
+            document.write("<p>The largest number is " + num2 + "</p>");
+        }
+        else if(num3 >= num1 && num3 >= num2)
+        {
+            document.write("<p>The largest number is " + num3 + "</p>");
+        }
+    </script>
+</body>
+</html>

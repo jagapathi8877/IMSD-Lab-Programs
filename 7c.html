@@ -1,0 +1,48 @@
+<html>
+<head>
+<script>
+       var a = [10, 20, 30, 40, 50];
+       document.write("Original: " + a + "<br>");
+
+       a.push(60);
+       document.write("After push(60): " + a + "<br>");
+
+       document.write("Length: " + a.length + "<br>");
+
+       a.pop();
+       document.write("After pop(): " + a + "<br>");
+
+       a.unshift(12);
+       document.write("After unshift(12): " + a + "<br>");
+
+       a.shift();
+       document.write("After shift(): " + a + "<br>");
+
+       var sliced = a.slice(1, 3);
+       document.write("slice(1,3): " + sliced + "<br>");
+
+       a.splice(2, 1, 99);
+       document.write("After splice(2,1,99): " + a + "<br>");
+
+       var rev = [...a].reverse();
+       document.write("reverse(): " + rev + "<br>");
+
+       var sorted = [...a].sort((x, y) => y - x);
+       document.write("sort(desc): " + sorted + "<br>");
+
+       document.write("join with '-': " + a.join("-") + "<br>");
+
+       document.write("includes(30): " + a.includes(30) + "<br>");
+       document.write("indexOf(40): " + a.indexOf(40) + "<br>");
+
+       var doubled = a.map(x => x * 2);
+       document.write("map *2: " + doubled + "<br>");
+
+       var even = a.filter(x => x % 2 === 0);
+       document.write("filter even: " + even + "<br>");
+
+       var sum = a.reduce((s, v) => s + v, 0);
+       document.write("reduce sum: " + sum + "<br>");
+</script>
+</head>
+</html>

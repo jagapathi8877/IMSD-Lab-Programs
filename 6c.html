@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <script>
+        function promptInput() {
+            var name = prompt("Enter your name:");
+            alert("Hello, " + name);
+        }
+        function textBoxInput() {
+            var value = document.getElementById("txt").value;
+            alert("You entered: " + value);
+        }
+        function selectInput() {
+            var value = document.getElementById("sel").value;
+            alert("You selected: " + value);
+        }
+    </script>
+</head>
+
+<body>
+    <button onclick="promptInput()">Prompt Input</button><br><br>
+    <input type="text" id="txt" placeholder="Type something">
+    <button onclick="textBoxInput()">Text Box Input</button><br><br>
+    <select id="sel">
+        <option value="Samsung">Samsung</option>
+        <option value="Oppo">Oppo</option>
+        <option value="Vivo">Vivo</option>
+        <option value="Iphone">Iphone</option>
+    </select>
+    <button onclick="selectInput()">Select Input</button>
+</body>
+
+</html>

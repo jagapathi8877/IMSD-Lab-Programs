@@ -1,0 +1,22 @@
+<html>
+<body>
+<script>
+      function fibbo(n)
+      {
+          let a = 1,b = 1;
+          document.write(a + " ");
+          if(n > 1) document.write(b + " ");
+          for(let i = 2; i < n; i++)
+          {
+              let c = a + b;
+              document.write(c + " ");
+              a = b;
+              b = c;
+          }
+      }
+      let a = prompt("Enter the number of fibbonacci digits");
+      a = Number(a);
+      fibbo(a);
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+    const student = {
+        name: "Vivek",
+        age: 18,
+        year: "2nd"
+    };
+
+    document.write("<p>Using for-in loop</p>");
+    for (let key in student) {
+        document.write("<p>" + key + " : " + student[key] + "</p>");
+    }
+
+    document.write("<p>Using forEach loop</p>");
+    Object.keys(student).forEach(key => {
+        document.write("<p>" + key + " : " + student[key] + "</p>");
+    });
+
+    document.write("<p>sing for-of loop</p>");
+    for (let [key, value] of Object.entries(student)) {
+        document.write("<p>" + key + " : " + value + "</p>");
+    }
+</script>
+</body>
+</html>

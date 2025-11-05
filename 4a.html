@@ -1,0 +1,124 @@
+
+<html lang="en">
+<head>
+
+  <style>
+    /* -------- i. Simple Selectors -------- */
+    p {
+      color: blue;
+    }
+
+    #abc {
+      font-weight: bold;
+    }
+
+    .highlight {
+      background-color: yellow;
+    }
+
+    h1, h2 {
+      color: darkgreen;
+    }
+
+    * {
+      font-family: Arial, sans-serif;
+    }
+
+    /* -------- ii. Combinator Selectors -------- */
+    div p {
+      color: darkred; /* descendant */
+    }
+
+    ul > li {
+      color: orange; /* child */
+    }
+
+    h3 + p {
+      font-style: italic; /* adjacent sibling */
+    }
+
+    h4 ~ p {
+      text-decoration: underline; /* general sibling */
+    }
+
+    /* -------- iii. Pseudo-class Selector -------- */
+    a:hover {
+      color: blue;
+    }
+
+    li:first-child {
+      font-size: 18px;
+    }
+
+    input:focus {
+      border: 2px solid green;
+    }
+
+    /* -------- iv. Pseudo-element Selector -------- */
+    p::first-line {
+      font-weight: bold;
+    }
+
+    p::before {
+      content: "→ ";
+      color: gray;
+    }
+
+    /* -------- v. Attribute Selector -------- */
+    input[type="text"] {
+      background-color: #e0f7fa;
+    }
+
+    a[target="_blank"] {
+      color: purple;
+    }
+
+  </style>
+</head>
+<body>
+
+  <h1>CSS Selector Forms</h1>
+
+  <!-- Simple Selectors -->
+  <p>This is a paragraph styled using element selector.</p>
+  <font id="abc">This paragraph uses an ID selector.</p>
+  <p class="highlight">This paragraph uses a class selector.</p>
+  <h2>Grouped selector example for h1 and h2</h2>
+
+  <!-- Combinator Selectors -->
+  <div>
+    <p>This is a descendant of div.</p>
+  </div>
+
+  <ul>
+    <li>First child in ul (child selector)</li>
+    <li>Second item in ul</li>
+  </ul>
+
+  <h3>Heading 3</h3>
+  <p>This is adjacent to h3 (adjacent sibling)</p>
+
+  <h4>Heading 4</h4>
+  <p>Paragraph after h4 (general sibling)</p>
+  <p>Another paragraph after h4</p>
+
+  <!-- Pseudo-class Selectors -->
+  <a href="#" >Hover over me</a>
+
+  <ul>
+    <li>Item A</li>
+    <li>Item B</li>
+  </ul>
+
+  <input type="text" placeholder="Focus on me" />
+
+  <!-- Pseudo-element Selectors -->
+  <p>This paragraph demonstrates pseudo-elements like ::before and ::first-line.</p>
+
+  <!-- Attribute Selectors -->
+  <input type="text" placeholder="Text input field" />
+  <input type="password" placeholder="Password field" />
+  <a href="https://example.com" target="_blank">External Link</a>
+
+</body>
+</html>

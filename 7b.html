@@ -1,0 +1,38 @@
+<html>
+<body>
+  <h2>Window Object Properties and Methods</h2>
+  <button onclick="showWindowInfo()">Show Window Info</button>
+  <button onclick="openNewWindow()">Open New Window</button>
+  <button onclick="askName()">Ask Name</button>
+
+  <script>
+    // Function to display some window properties
+    function showWindowInfo() {
+      let width = window.innerWidth;
+      let height = window.innerHeight;
+      let url = window.location.href;
+      alert("Window Width: " + width + "\nWindow Height: " + height + "\nCurrent URL: " + url);
+    }
+
+    // Function to open a new window
+    function openNewWindow() {
+      window.open("https://www.google.com", "_blank", "width=600,height=400");
+    }
+
+    // Function to use prompt and alert
+    function askName() {
+      let name = window.prompt("Enter your name:");
+      if (name) {
+        window.alert("Hello, " + name + "! Welcome to the site 😊");
+      } else {
+        window.alert("You didn’t enter a name.");
+      }
+    }
+
+    // Example of using setTimeout
+    window.setTimeout(() => {
+      console.log("This message appears after 3 seconds!");
+    }, 3000);
+  </script>
+</body>
+</html>
